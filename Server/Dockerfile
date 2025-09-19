@@ -1,14 +1,36 @@
-# Base image
-FROM openjdk:17-oracle
+# FROM openjdk:17-oracle
+#
+# WORKDIR /app
+#
+# # Install netcat so wait-for script can use it
+# RUN apt-get update && apt-get install -y netcat-openbsd && rm -rf /var/lib/apt/lists/*
+#
+#
+# # Copy JAR file
+# COPY target/myshop-0.0.1-SNAPSHOT.jar myapp.jar
+#
+# # Copy wait-for script
+# COPY wait-for-mysql.sh wait-for-mysql.sh
+# RUN chmod +x wait-for-mysql.sh
+#
+# # Run wait-for script which then launches the app
+# CMD ["./wait-for-mysql.sh"]
 
-# Set working directory
+
+
+FROM openjdk:17-alpine
+
 WORKDIR /app
 
-# Copy JAR file
-COPY target/organica-0.0.1-SNAPSHOT.jar myapp.jar
+# Install netcat for Alpine
+RUN apk add --no-cache netcat-openbsd
 
-# Expose port 8080
-EXPOSE 9090
+COPY target/myshop-0.0.1-SNAPSHOT.jar myapp.jar
+COPY wait-for-mysql.sh wait-for-mysql.sh
+RUN chmod +x wait-for-mysql.sh
 
-# Start the Java Spring Boot application
-CMD ["java", "-jar", "myapp.jar"]
+CMD ["./wait-for-mysql.sh"]
+
+
+
+
