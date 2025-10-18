@@ -1,6 +1,10 @@
 package com.anushka.myshop.config;
 
+<<<<<<< HEAD
 import com.anushka.myshop.config.JwtAuthenticationFilter;
+=======
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,11 +21,15 @@ public class SecurityConfiguration {
 
     @Autowired
     private JwtAuthenticationFilter jwtAuthFilter;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
     @Autowired
     private AuthenticationProvider authenticationProvider;
 
     @Bean
+<<<<<<< HEAD
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
@@ -44,4 +52,29 @@ public class SecurityConfiguration {
 
         return http.build();
     }
+=======
+    public SecurityFilterChain securityFilterChain (HttpSecurity http) throws Exception {
+         http.csrf().disable()
+                 .authorizeHttpRequests()
+
+                 .requestMatchers("/**")
+                 .permitAll()
+//                .requestMatchers("/product/**").hasRole(ADMIN.name())
+//                 .requestMatchers("/cart/**").hasRole(ADMIN.name())
+                .anyRequest()
+                .authenticated()
+                 .and()
+                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                 .and()
+                 .authenticationProvider(authenticationProvider)
+                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+
+        return http.build();
+    }
+
+
+
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 }

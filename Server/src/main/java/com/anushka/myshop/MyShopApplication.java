@@ -3,6 +3,7 @@ package com.anushka.myshop;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+<<<<<<< HEAD
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,6 +16,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EntityScan(basePackages = "com.anushka.myshop.entities")
 @EnableJpaRepositories(basePackages = "com.anushka.myshop.repositories")
 @ComponentScan(basePackages = "com.anushka.myshop")
+=======
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 @SpringBootApplication
 public class MyShopApplication {
 

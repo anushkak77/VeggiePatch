@@ -41,7 +41,11 @@ export const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     const res = await fetch("http://localhost:8080/auth/signin", {
+=======
+    const res = await fetch("http://localhost:9090/auth/singin", {
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
       method: "POST",
       headers: {
         "Content-Type": "application/json",

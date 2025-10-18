@@ -24,4 +24,12 @@ public class CartDetalis {
 
     @ManyToOne
     private Cart cart;
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 }

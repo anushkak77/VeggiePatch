@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+<<<<<<< HEAD
 
 	<groupId>com.anushka.myshop</groupId>
 	<artifactId>myshop</artifactId>
@@ -32,30 +39,97 @@
 		</dependency>
 
 		<!-- Spring Data JPA (ORM + Hibernate) -->
+=======
+	<groupId>com.myshop</groupId>
+	<artifactId>myshop</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>MyShop</name>
+	<description>Personal Journal application built with Spring Boot and MySQL</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+<<<<<<< HEAD
 
 		<!-- MySQL Database Driver -->
+=======
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
 
 		<!-- Spring Security -->
+=======
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
+<<<<<<< HEAD
 		<!-- JWT for authentication -->
+=======
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>6.0.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
 			<version>0.11.5</version>
 		</dependency>
+<<<<<<< HEAD
+=======
+		<!-- https://mvnrepository.com/artifact/com.razorpay/razorpay-java -->
+		<dependency>
+			<groupId>com.razorpay</groupId>
+			<artifactId>razorpay-java</artifactId>
+			<version>1.4.4</version>
+		</dependency>
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-impl</artifactId>
@@ -67,6 +141,7 @@
 			<version>0.11.5</version>
 		</dependency>
 
+<<<<<<< HEAD
 		<!-- Razorpay Payment Gateway -->
 		<dependency>
 			<groupId>com.razorpay</groupId>
@@ -122,6 +197,26 @@
 			</plugin>
 
 			<!-- Compiler Plugin for Java 17 -->
+=======
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<!-- ✅ Add this plugin -->
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -129,9 +224,17 @@
 				<configuration>
 					<source>17</source>
 					<target>17</target>
+<<<<<<< HEAD
+=======
+					<release>17</release>
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 </project>

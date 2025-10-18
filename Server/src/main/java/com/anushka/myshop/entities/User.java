@@ -18,7 +18,10 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @Data
 @ToString
+<<<<<<< HEAD
 @Table(name = "users")
+=======
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
 public class User implements UserDetails {
 
     @Id
@@ -80,5 +83,8 @@ public class User implements UserDetails {
         return true;
     }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f770588a39155b20a93052505e3ab8e7bf705179
