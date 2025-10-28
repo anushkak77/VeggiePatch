@@ -1,6 +1,6 @@
-# MyShop - Full Stack E-commerce Project
+# VeggiePatch - Full Stack E-commerce Project
 
-MyShop is a full-stack e-commerce application built using **Spring Boot**, **React.js**, and **MySQL**.  
+VeggiePatch is a full-stack e-commerce application built using **Spring Boot**, **React.js**, and **MySQL**.  
 It provides a seamless shopping experience with features like product browsing, cart management, secure payments, and JWT-based authentication.
 
 ---
@@ -13,7 +13,7 @@ It provides a seamless shopping experience with features like product browsing, 
 - **Deployment Ready:** Docker support included  
 
 ---
-
+This project is an open-source full-stack online vegetable marketplace. I am currently exploring and extending its functionality, including backend APIs, frontend UI, and Docker deployment. Planned enhancements include
 ## 🔑 Features
 - User authentication and authorization using JWT  
 - Product browsing and searching  
